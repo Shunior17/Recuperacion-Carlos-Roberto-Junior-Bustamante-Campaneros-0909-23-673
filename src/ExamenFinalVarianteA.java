@@ -1,11 +1,8 @@
 import java.util.Scanner;
-import java.util.List;
-import java.util.ArrayList;
 
 public class ExamenFinalVarianteA {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<Estudiantes> listaEstudiantes=new ArraList<>();
 
 int opcion;
 
@@ -23,8 +20,10 @@ do {
             calculadora();
         break;
         case 2:
+            Estudiante.crearEstudiante();
         break;
         case 3:
+            Estudiante.mostrarEstudiantes(Estudiante.listaEstudiantes);
         break;
         case 4:
             System.out.println("Saliendo del programa");
