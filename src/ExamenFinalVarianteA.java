@@ -20,6 +20,7 @@ do {
     opcion=sc.nextInt();
     switch (opcion) {
         case 1:
+            calculadora();
         break;
         case 2:
         break;
@@ -33,5 +34,42 @@ do {
     }
         }while (opcion!=4);
     }
-
+    public static void calculadora(){
+        int num1, num2, resultado=0;
+        Scanner sc = new Scanner(System.in);
+        char operador;
+        System.out.println("Ingrese el primer numero");
+        num1=sc.nextInt();
+        System.out.println("Ingrese el segundo numero");
+        num2=sc.nextInt();
+        System.out.println("""
+                Que operacion desea hacer
+                + Sumar
+                - Restar
+                * Multiplicar
+                / Dividir
+                \s""");
+        operador=sc.next().charAt(0);
+        switch (operador) {
+            case '+':
+                resultado=num1+num2;
+                System.out.println("El resultado de la suma es: "+resultado);
+                break;
+            case '-':
+                resultado=num1-num2;
+                System.out.println("El resultado de la resta es: "+resultado);
+                break;
+            case '*':
+                resultado=num1*num2;
+                System.out.println("El resultado de la multiplicacion es: "+resultado);
+                break;
+            case '/':
+                resultado=num1/num2;
+                System.out.println("El resultado de la division es: "+resultado);
+                break;
+            default:
+                System.out.println("Operacion invalida");
+                break;
+        }
+    }
 }
